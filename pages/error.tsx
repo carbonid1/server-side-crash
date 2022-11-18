@@ -10,8 +10,9 @@ function Error({ statusCode, errorMessage }) {
 }
 
 Error.getInitialProps = ({ res, ...rest }) => {
-  const debug = JSON.stringify(rest, null, 2)
-  console.log(debug)
+  // console.log(Object.keys(rest.err))
+  // console.log(Object.keys(rest.req), rest.req)
+  console.log(Object.keys(res), res)
   const statusCode = res ? res.statusCode : 404
   return { statusCode }
 }
