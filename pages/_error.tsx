@@ -9,10 +9,10 @@ function Error({ statusCode, errorMessage }) {
   )
 }
 
-Error.getInitialProps = ({ res, ...rest }) => {
-  // console.log(Object.keys(rest.err))
+Error.getInitialProps = ({ res, err, ...rest }) => {
+  console.log(Object.keys(err))
   // console.log(Object.keys(rest.req), rest.req)
-  console.log(Object.keys(res), res)
+  // console.log(Object.keys(res), res)
   const statusCode = res ? res.statusCode : 404
   return { statusCode }
 }
